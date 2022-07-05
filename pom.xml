@@ -18,6 +18,7 @@
       <module>zoo-order80</module>
       <module>consul-payment8006</module>
       <module>consul-consumer-order80</module>
+      <module>cloud-feign-order80</module>
   </modules>
   <packaging>pom</packaging>
   <name>Maven</name>
