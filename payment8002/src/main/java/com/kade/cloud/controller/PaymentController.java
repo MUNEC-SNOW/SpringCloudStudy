@@ -20,7 +20,12 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @Value("${server.port}")
-    private Integer ServerPort;
+    private String ServerPort;
+
+    @GetMapping(value = "payment/lb")
+    public String getPaymentLB(){
+        return ServerPort;
+    }
 
     @PostMapping(value = "payment/create")
     public CommonResult<Integer> create(@RequestBody Payment payment){

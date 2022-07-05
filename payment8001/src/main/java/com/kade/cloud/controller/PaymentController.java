@@ -28,6 +28,11 @@ public class PaymentController {
     @Resource
     protected DiscoveryClient discoveryClient;
 
+    @GetMapping(value = "payment/lb")
+    public String getPaymentLB(){
+        return ServerPost;
+    }
+
     @GetMapping("/discovery")
     public Object discovery() {
         List<String> services = discoveryClient.getServices();
