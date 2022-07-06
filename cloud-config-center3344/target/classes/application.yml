@@ -1,0 +1,24 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center # 注册进eureka服务器的微服务名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MUNEC-SNOW/springcloudstudy-config.git
+          # 搜索目录
+          search-paths:
+            - springcloud-config
+      label: main
+
+  # 服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka, http://localhost:7002/eureka
+  instance:
+    instance-id: cloud-config-server
+    prefer-ip-address: true

@@ -1,0 +1,40 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: payment_route
+#          uri: http://localhost:8001
+          uri: lb://cloud-payment-service
+          predicates:
+#            - Method=GET
+#            - Host=**.kade.com
+            - Path=/payment/get/**
+#            - Cookie=username,txl
+#            - Header=X-Request-Id, \d+
+#            - Query=username
+        - id: payment_route2
+#          uri: http://localhost:8001
+          uri: lb://cloud-payment-service
+          predicates:
+              - Path=/payment/lb/**
+
+
+
+eureka:
+  instance:
+    hostname: cloud-gateway-service
+    prefer-ip-address: true
+    instance-id: cloud-gateway9527
+  client:
+    service-url:
+      register-with-eureka: true
+      fetcher-register: true
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
