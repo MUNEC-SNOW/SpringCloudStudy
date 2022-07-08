@@ -1,0 +1,32 @@
+server:
+  port: 3366
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      discovery:
+        service-id: cloud-config-center
+        enabled: true
+      label: main
+      name: config
+      profile: dev
+      uri: http://config-3344:3344
+rabbitmq:
+  port: 15672
+  host: localhost
+  username: guest
+  password: guest
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -11,10 +11,14 @@ spring:
           uri: https://github.com/MUNEC-SNOW/springcloudstudy-config.git
           # 搜索目录
           search-paths:
-            - springcloud-config
+            - springcloudstudy-config
       label: main
+rabbitmq:
+  port: 15672
+  host: localhost
+  username: guest
+  password: guest
 
-  # 服务注册到eureka地址
 eureka:
   client:
     service-url:
@@ -22,3 +26,9 @@ eureka:
   instance:
     instance-id: cloud-config-server
     prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'

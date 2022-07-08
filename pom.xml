@@ -26,6 +26,10 @@
       <module>cloud-config-center3344</module>
     <module>cloud-config-client3355</module>
     <module>consul-payment8007</module>
+      <module>cloud-config-client3366</module>
+      <module>rabbitmq-pro8801</module>
+      <module>rabbitmq-con8802</module>
+      <module>rabbitmq-con8803</module>
   </modules>
   <packaging>pom</packaging>
   <name>Maven</name>

@@ -23,9 +23,6 @@ import java.util.List;
 @Slf4j
 public class OrderController {
 
-//    public static final String URL = "http://localhost:8001";
-    public static final String URL = "http://CLOUD-PAYMENT-SERVICE";
-
     @Resource
     private LoadBalancer loadBalancer;
     @Resource
@@ -34,27 +31,37 @@ public class OrderController {
     @Resource
     private RestTemplate restTemplate;
 
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin(){
+        URI uri = getUri("CLOUD-PAYMENT-SERVICE");
+        return restTemplate.getForObject(uri+"/payment/zipkin", String.class);
+    }
+
     @GetMapping("/consumer/payment/lb")
     public String getB(){
-        List<String> services = discoveryClient.getServices();
-        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
-        if (instances == null || instances.size() <= 0) {
-            return null;
-        }
-
-        ServiceInstance serviceInstance = loadBalancer.instances(instances);
-        URI uri = serviceInstance.getUri();
-
+        URI uri = getUri("CLOUD-PAYMENT-SERVICE");
         return restTemplate.getForObject(uri+"/payment/lb", String.class);
     }
 
     @GetMapping("/consumer/payment/create")
     public CommonResult<Payment> create(Payment payment) {
-        return restTemplate.postForObject(URL + "/payment/create", payment, CommonResult.class);
+        URI uri = getUri("CLOUD-PAYMENT-SERVICE");
+        return restTemplate.postForObject(uri + "/payment/create", payment, CommonResult.class);
     }
 
     @GetMapping("/consumer/payment/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
-        return restTemplate.getForObject(URL + "/payment/get/"+ id, CommonResult.class);
+        URI uri = getUri("CLOUD-PAYMENT-SERVICE");
+        return restTemplate.getForObject(uri + "/payment/get/"+ id, CommonResult.class);
+    }
+
+    private URI getUri(String id) {
+        List<String> services = discoveryClient.getServices();
+        List<ServiceInstance> instances = discoveryClient.getInstances(id);
+        if (instances == null || instances.size() <= 0) {
+            return null;
+        }
+        ServiceInstance serviceInstance = loadBalancer.instances(instances);
+        return serviceInstance.getUri();
     }
 }

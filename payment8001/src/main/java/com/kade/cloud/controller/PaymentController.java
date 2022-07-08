@@ -29,6 +29,11 @@ public class PaymentController {
     @Resource
     protected DiscoveryClient discoveryClient;
 
+    @GetMapping("/payment/zipkin")
+    public String payment(){
+        return "hi, I am paymentZipkin server fall back, welcome to here, O(∩_∩)O哈哈~";
+    }
+
     @GetMapping(value = "payment/lb")
     public String getPaymentLB(){
         return ServerPost;
