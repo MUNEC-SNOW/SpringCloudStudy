@@ -30,6 +30,9 @@
       <module>rabbitmq-pro8801</module>
       <module>rabbitmq-con8802</module>
       <module>rabbitmq-con8803</module>
+    <module>cloudalibaba-provider-payment9001</module>
+    <module>cloudalibaba-consumer-order83</module>
+    <module>cloudalibaba-config-nacos-client3377</module>
   </modules>
   <packaging>pom</packaging>
   <name>Maven</name>
