@@ -1,12 +1,12 @@
 server:
-  port: 3377
+  port: ${server.port}
 spring:
   application:
     name: nacos-config-client
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: ${discovery.server-addr}
       config:
         server-addr: localhost:8848
         file-extension: yaml
