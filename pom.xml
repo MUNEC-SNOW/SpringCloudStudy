@@ -9,34 +9,35 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>payment8001</module>
-      <module>order80</module>
-      <module>common</module>
-      <module>eureka-server</module>
-      <module>eureka-server-backup</module>
-      <module>payment8002</module>
-      <module>payment8004</module>
-      <module>zoo-order80</module>
-      <module>consul-payment8006</module>
-      <module>consul-consumer-order80</module>
-      <module>cloud-feign-order80</module>
-      <module>cloud-hystrix-payment8001</module>
-      <module>cloud-feign-hystrix-order80</module>
-      <module>cloud-consumer-hystrix-dashboard</module>
-      <module>cloud-gateway-gateway9527</module>
-      <module>cloud-config-center3344</module>
+    <module>order80</module>
+    <module>common</module>
+    <module>eureka-server</module>
+    <module>eureka-server-backup</module>
+    <module>payment8002</module>
+    <module>payment8004</module>
+    <module>zoo-order80</module>
+    <module>consul-payment8006</module>
+    <module>consul-consumer-order80</module>
+    <module>cloud-feign-order80</module>
+    <module>cloud-hystrix-payment8001</module>
+    <module>cloud-feign-hystrix-order80</module>
+    <module>cloud-consumer-hystrix-dashboard</module>
+    <module>cloud-gateway-gateway9527</module>
+    <module>cloud-config-center3344</module>
     <module>cloud-config-client3355</module>
     <module>consul-payment8007</module>
-      <module>cloud-config-client3366</module>
-      <module>rabbitmq-pro8801</module>
-      <module>rabbitmq-con8802</module>
-      <module>rabbitmq-con8803</module>
+    <module>cloud-config-client3366</module>
+    <module>rabbitmq-pro8801</module>
+    <module>rabbitmq-con8802</module>
+    <module>rabbitmq-con8803</module>
     <module>cloudalibaba-provider-payment9001</module>
     <module>cloudalibaba-consumer-order83</module>
     <module>cloudalibaba-config-nacos-client3377</module>
-      <module>cloudalibaba-sentinel-service8401</module>
-      <module>cloudalibaba-provider-paymeny9003</module>
+    <module>cloudalibaba-sentinel-service8401</module>
+    <module>cloudalibaba-provider-paymeny9003</module>
     <module>cloudalibaba-payment9004</module>
-      <module>cloudalibaba-consumer-nacos-order84</module>
+    <module>cloudalibaba-consumer-nacos-order84</module>
+    <module>JucStudy</module>
   </modules>
   <packaging>pom</packaging>
   <name>Maven</name>

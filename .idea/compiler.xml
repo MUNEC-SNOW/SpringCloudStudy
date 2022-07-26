@@ -7,14 +7,36 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="zoo-order80" />
-        <module name="payment8002" />
-        <module name="payment8004" />
+        <module name="cloud-config-center3344" />
+        <module name="cloud-config-client3366" />
+        <module name="order80" />
+        <module name="cloudalibaba-consumer-nacos-order84" />
+        <module name="eureka-server" />
+        <module name="cloudalibaba-provider-paymeny9003" />
+        <module name="consul-payment8007" />
         <module name="common" />
         <module name="eureka-server-backup" />
-        <module name="order80" />
-        <module name="eureka-server" />
+        <module name="JucStudy" />
+        <module name="cloudalibaba-payment9004" />
         <module name="payment8001" />
+        <module name="cloudalibaba-config-nacos-client3377" />
+        <module name="payment8002" />
+        <module name="cloud-config-client3355" />
+        <module name="payment8004" />
+        <module name="consul-consumer-order80" />
+        <module name="cloud-consumer-hystrix-dashboard" />
+        <module name="cloud-feign-hystrix-order80" />
+        <module name="cloud-hystrix-payment8001" />
+        <module name="cloudalibaba-consumer-order83" />
+        <module name="zoo-order80" />
+        <module name="consul-payment8006" />
+        <module name="rabbitmq-pro8801" />
+        <module name="cloud-feign-order80" />
+        <module name="cloudalibaba-provider-payment9001" />
+        <module name="cloud-gateway-gateway9527" />
+        <module name="rabbitmq-con8803" />
+        <module name="rabbitmq-con8802" />
+        <module name="cloudalibaba-sentinel-service8401" />
       </profile>
     </annotationProcessing>
   </component>
